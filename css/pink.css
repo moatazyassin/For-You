@@ -1,0 +1,16 @@
+    #page-pink .scene { background:radial-gradient(ellipse at 50% 80%,#1a0018 0%,#0a000f 60%,#000005 100%); }
+    #page-pink .pk-star { position:absolute; border-radius:50%; background:#ffccff; animation:pk-tw ease-in-out infinite; }
+    @keyframes pk-tw { 0%,100%{opacity:0.15} 50%{opacity:0.8} }
+    #page-pink .pk-firefly { position:absolute; border-radius:50%; animation:pk-fly ease-in-out infinite; }
+    @keyframes pk-fly { 0%{opacity:0;transform:translate(0,0)} 40%{opacity:1} 100%{opacity:0;transform:translate(var(--dx),var(--dy))} }
+    #page-pink .pk-grass { position:absolute; bottom:50px; width:5px; border-radius:3px 3px 0 0; transform-origin:50% 100%; background:linear-gradient(to top,#0a3a05,#1f8010); }
+    #page-pink .pk-grass.s1 { animation:sway 3.8s ease-in-out infinite; }
+    #page-pink .pk-grass.s2 { animation:sway2 4.6s ease-in-out infinite; }
+    #page-pink .pk-group { opacity:0; transform-origin:50% 100%; transform:scaleY(0); }
+    #page-pink .pk-group.bloomed { animation:pk-grow 1.3s cubic-bezier(0.34,1.56,0.64,1) forwards; }
+    @keyframes pk-grow { 0%{opacity:0;transform:scaleY(0)} 60%{opacity:1} 100%{opacity:1;transform:scaleY(1)} }
+    #page-pink .pk-sway  { transform-origin:50% 100%; animation:sway 4.2s ease-in-out infinite; }
+    #page-pink .pk-sway2 { transform-origin:50% 100%; animation:sway2 5.1s ease-in-out infinite; }
+    #page-pink .pk-petal { transform-origin:50% 100%; animation:petal-pulse 2.8s ease-in-out infinite; }
+    #page-pink .pk-gc { animation:gc-pulse 2s ease-in-out infinite; }
+    #page-pink .pk-particle { animation:float-up linear infinite; opacity:0; }

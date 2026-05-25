@@ -1,0 +1,15 @@
+    #page-orange .scene { background:radial-gradient(ellipse at 50% 80%,#2a0a00 0%,#0d0400 60%,#020100 100%); }
+    #page-orange .flower-group { opacity:0; transform-origin:bottom center; transform:scaleY(0); }
+    #page-orange .flower-group.bloomed { animation:og-grow 1.2s cubic-bezier(0.34,1.56,0.64,1) forwards; }
+    #page-orange .flower-group.main-bloomed { animation:og-grow 1.4s cubic-bezier(0.34,1.56,0.64,1) forwards; }
+    @keyframes og-grow { 0%{opacity:0;transform:scaleY(0)} 60%{opacity:1} 100%{opacity:1;transform:scaleY(1)} }
+    #page-orange .petal { transform-origin:50% 100%; animation:petal-pulse 3s ease-in-out infinite; }
+    @keyframes petal-pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.06)} }
+    #page-orange .gc { animation:gc-pulse 2s ease-in-out infinite; }
+    @keyframes gc-pulse { 0%,100%{opacity:0.9} 50%{opacity:1} }
+    #page-orange .particle { animation:float-up linear infinite; opacity:0; }
+    @keyframes float-up { 0%{opacity:0;transform:translateY(0) scale(0.5)} 20%{opacity:0.8} 100%{opacity:0;transform:translateY(-80px) scale(0.1)} }
+    #page-orange .sway  { transform-origin:50% 100%; animation:sway 4s ease-in-out infinite; }
+    #page-orange .sway2 { transform-origin:50% 100%; animation:sway2 5s ease-in-out infinite; }
+    @keyframes sway  { 0%,100%{transform:rotate(-2deg)} 50%{transform:rotate(2deg)} }
+    @keyframes sway2 { 0%,100%{transform:rotate(2deg)} 50%{transform:rotate(-2deg)} }

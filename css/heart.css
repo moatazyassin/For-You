@@ -1,0 +1,21 @@
+    #page-heart .hwrap {
+      width:100%; height:calc(100vh - 64px);
+      background:#000; position:relative; overflow:hidden;
+      display:flex; align-items:center; justify-content:center;
+    }
+    #page-heart canvas { display:block; }
+    #page-heart .h-controls {
+      position:absolute; bottom:28px; left:50%; transform:translateX(-50%);
+      display:flex; gap:12px; align-items:center;
+    }
+    #page-heart .h-btn {
+      font-family:'Dancing Script',cursive; font-size:15px; padding:8px 22px;
+      border-radius:100px; border:1px solid rgba(255,255,255,0.2);
+      background:rgba(255,255,255,0.05); color:#ccc; cursor:pointer; transition:all 0.3s;
+    }
+    #page-heart .h-btn:hover { background:rgba(255,255,255,0.12); color:#fff; }
+    #page-heart .h-btn.active {
+      border-color:var(--rose); color:var(--rose2);
+      background:rgba(255,45,107,0.1);
+      box-shadow:0 0 16px rgba(255,45,107,0.3);
+    }

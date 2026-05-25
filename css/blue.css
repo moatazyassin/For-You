@@ -1,0 +1,13 @@
+    #page-blue .scene { background:radial-gradient(ellipse at 50% 100%,#0a1a2e 0%,#050d1a 50%,#020810 100%); }
+    #page-blue .star { position:absolute; border-radius:50%; background:#ffffee; animation:twinkle ease-in-out infinite; }
+    @keyframes twinkle { 0%,100%{opacity:0.2} 50%{opacity:0.9} }
+    #page-blue .firefly { position:absolute; border-radius:50%; background:#ccff44; animation:fly ease-in-out infinite; }
+    @keyframes fly { 0%{opacity:0;transform:translate(0,0)} 30%{opacity:0.9} 70%{opacity:0.7} 100%{opacity:0;transform:translate(var(--dx),var(--dy))} }
+    #page-blue .grass { position:absolute; bottom:55px; width:4px; border-radius:3px 3px 0 0; transform-origin:50% 100%; background:linear-gradient(to top,#1a4a10,#2d8020); animation:sway 3.5s ease-in-out infinite; }
+    #page-blue .grass:nth-child(even) { animation:sway2 4.2s ease-in-out infinite; }
+    #page-blue .bl-sway  { animation:sway 4s ease-in-out infinite; transform-origin:50% 100%; }
+    #page-blue .bl-sway2 { animation:sway2 5s ease-in-out infinite; transform-origin:50% 100%; }
+    #page-blue .gp { animation:gp 2.5s ease-in-out infinite; }
+    @keyframes gp { 0%,100%{opacity:0.7;transform:scale(1)} 50%{opacity:1;transform:scale(1.15)} }
+    #page-blue .ground { position:absolute; bottom:0; left:0; right:0; height:65px; background:radial-gradient(ellipse at 50% 100%,#0d2a0a 0%,#050f05 60%,#020802 100%); border-radius:50% 50% 0 0/20px 20px 0 0; }
+    #page-blue .fl-group { opacity:0; }
