@@ -1,0 +1,154 @@
+    #page-eid {
+      background: #FDFBF7;
+      min-height: 100vh;
+    }
+    #page-eid .eid-wrap {
+      min-height: calc(100vh - 64px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px 60px;
+      background-image:
+        radial-gradient(ellipse 80% 50% at 15% 0%,  rgba(212,175,55,0.07) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 40% at 85% 100%, rgba(212,175,55,0.08) 0%, transparent 50%);
+    }
+    #page-eid .eid-card {
+      background: #F5EBE0;
+      border-radius: 24px;
+      box-shadow:
+        0 2px 4px   rgba(45,30,10,0.10),
+        0 8px 24px  rgba(45,30,10,0.12),
+        0 32px 80px rgba(45,30,10,0.20),
+        inset 0 1px 0 rgba(255,255,255,0.7),
+        inset 0 -1px 0 rgba(212,175,55,0.1);
+      width: 100%; max-width: 580px;
+      overflow: hidden;
+      transition: transform 0.6s cubic-bezier(0.23,1,0.32,1), box-shadow 0.6s ease;
+      will-change: transform;
+    }
+    #page-eid .eid-card:hover {
+      box-shadow:
+        0 4px 8px   rgba(45,30,10,0.12),
+        0 16px 48px rgba(45,30,10,0.15),
+        0 48px 100px rgba(45,30,10,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.7);
+    }
+    /* arch animations — triggered by .eid-go */
+    #page-eid .eid-arch-top    { opacity: 0; width: 100%; }
+    #page-eid .eid-arch-bottom { opacity: 0; width: 100%; }
+    #page-eid .eid-moon        { opacity: 0; transform: translateY(-8px) scale(0.85); }
+    #page-eid .eid-heading     { opacity: 0; transform: translateY(16px); }
+    #page-eid .eid-sub         { opacity: 0; }
+    #page-eid .eid-rule        { opacity: 0; }
+    #page-eid .eid-body        { opacity: 0; transform: translateY(20px); }
+    #page-eid .eid-footer-line { opacity: 0; }
+
+    #page-eid.eid-go .eid-arch-top {
+      animation: eid-slideDown 0.9s cubic-bezier(0.23,1,0.32,1) 0.05s both;
+    }
+    #page-eid.eid-go .eid-arch-bottom {
+      animation: eid-slideUp 0.9s cubic-bezier(0.23,1,0.32,1) 0.15s both;
+    }
+    #page-eid.eid-go .eid-moon {
+      animation: eid-moonIn 1s cubic-bezier(0.34,1.56,0.64,1) 0.65s both;
+    }
+    #page-eid.eid-go .eid-heading {
+      animation: eid-fadeUp 0.9s cubic-bezier(0.23,1,0.32,1) 1.05s both;
+    }
+    #page-eid.eid-go .eid-sub {
+      animation: eid-fadeIn 0.8s ease 1.30s both;
+    }
+    #page-eid.eid-go .eid-rule {
+      animation: eid-fadeIn 0.8s ease 1.48s both;
+    }
+    #page-eid.eid-go .eid-body {
+      animation: eid-fadeUp 1s cubic-bezier(0.23,1,0.32,1) 1.62s both;
+    }
+    #page-eid.eid-go .eid-footer-line {
+      animation: eid-fadeIn 1s ease 2.5s both;
+    }
+
+    @keyframes eid-slideDown { from{opacity:0;transform:translateY(-12px)} to{opacity:1;transform:none} }
+    @keyframes eid-slideUp   { from{opacity:0;transform:translateY(12px)}  to{opacity:1;transform:none} }
+    @keyframes eid-fadeUp    { from{opacity:0;transform:translateY(20px)}  to{opacity:1;transform:none} }
+    @keyframes eid-fadeIn    { from{opacity:0} to{opacity:1} }
+    @keyframes eid-moonIn    { from{opacity:0;transform:translateY(-8px) scale(0.85)} to{opacity:1;transform:none} }
+
+    /* card body */
+    #page-eid .eid-card-body {
+      padding: 10px 44px 44px;
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+    }
+    #page-eid .eid-moon svg {
+      filter: drop-shadow(0 0 10px rgba(212,175,55,0.45)) drop-shadow(0 2px 8px rgba(212,175,55,0.2));
+      margin-bottom: 20px; display: block;
+    }
+    #page-eid .eid-heading {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(30px, 7vw, 52px);
+      line-height: 1.1; letter-spacing: 0.01em;
+      color: #2D2D2D; margin-bottom: 6px;
+    }
+    #page-eid .eid-heading em { font-style: italic; color: #D4AF37; }
+    #page-eid .eid-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300; font-style: italic;
+      font-size: clamp(13px, 2.5vw, 16px);
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: #D4AF37; margin-bottom: 28px;
+    }
+    #page-eid .eid-rule {
+      display: flex; align-items: center; gap: 14px;
+      width: 100%; max-width: 360px; margin-bottom: 28px;
+    }
+    #page-eid .eid-rule-line {
+      flex: 1; height: 1px;
+      background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+    }
+    #page-eid .eid-rule-diamond {
+      width: 6px; height: 6px; background: #D4AF37;
+      transform: rotate(45deg); box-shadow: 0 0 6px rgba(212,175,55,0.6);
+    }
+    #page-eid .eid-body { width: 100%; }
+    #page-eid .eid-salutation {
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-size: clamp(15px, 3vw, 19px);
+      color: #2D2D2D; text-align: left; margin-bottom: 18px;
+    }
+    #page-eid .eid-p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(15px, 3vw, 18px);
+      line-height: 1.95; color: #4A4A4A;
+      margin-bottom: 20px; text-align: left;
+    }
+    #page-eid .eid-p:last-of-type { margin-bottom: 0; }
+    #page-eid .eid-sig {
+      margin-top: 32px; text-align: right;
+      border-top: 1px solid rgba(212,175,55,0.35);
+      padding-top: 22px;
+    }
+    #page-eid .eid-sig-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(45,45,45,0.45); margin-bottom: 7px;
+    }
+    #page-eid .eid-sig-name {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(19px, 4vw, 25px);
+      color: #D4AF37;
+      filter: drop-shadow(0 1px 4px rgba(212,175,55,0.3));
+    }
+    #page-eid .eid-footer-line {
+      margin-top: 36px;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-size: 13px;
+      letter-spacing: 0.1em;
+      color: rgba(45,45,45,0.45); text-align: center;
+    }
+    @media(max-width:480px){
+      #page-eid .eid-card-body { padding: 8px 24px 32px; }
+    }
